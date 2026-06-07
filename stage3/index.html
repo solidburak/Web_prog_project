@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloom &amp; Petal – Stage 3: Colors &amp; Typography</title>
+
+    <!-- Google Fonts: Playfair Display (headings) + Lato (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           STAGE 3 — Colors & Typography
+           RULE: margin and padding are strictly NOT used.
+           The cramped appearance is intentional and expected.
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            background-color: #fefae0;
+            color: #1b1b1b;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2d6a4f;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #d4edda;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            color: #b7e4c7;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #1b4332;
+        }
+
+        nav a {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #d8f3dc;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+            text-decoration: underline;
+        }
+
+        nav span {
+            color: #52b788;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #d4edda;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2d6a4f;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: #40916c;
+        }
+
+        section {
+            background-color: #ffffff;
+        }
+
+        #home {
+            background-color: #f8fdf9;
+        }
+
+        #home p {
+            font-size: 1.05rem;
+            color: #3d405b;
+        }
+
+        #home img {
+            display: block;
+            border: 4px solid #52b788;
+            border-radius: 8px;
+        }
+
+        #products {
+            background-color: #fefae0;
+        }
+
+        .product-img {
+            border: 3px solid #d4a373;
+            border-radius: 6px;
+            display: block;
+        }
+
+        #products p {
+            color: #555;
+        }
+
+        #products strong {
+            color: #2d6a4f;
+            font-size: 1.05rem;
+        }
+
+        #hours {
+            background-color: #f0faf4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Lato', sans-serif;
+        }
+
+        table caption {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #2d6a4f;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #2d6a4f;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            text-align: left;
+        }
+
+        table td {
+            background-color: #ffffff;
+            color: #333;
+            border-bottom: 1px solid #d8f3dc;
+            font-size: 0.95rem;
+        }
+
+        table tr:nth-child(even) td {
+            background-color: #f0faf4;
+        }
+
+        table th, table td {
+            border: 1px solid #b7e4c7;
+        }
+
+        #about {
+            background-color: #fff8f0;
+        }
+
+        #about p {
+            font-size: 1rem;
+            color: #3d405b;
+        }
+
+        #about ul {
+            list-style: none;
+        }
+
+        #about ul li::before {
+            content: "\f06c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #52b788;
+        }
+
+        #about ul li {
+            color: #3d3d3d;
+            font-size: 0.97rem;
+        }
+
+        #contact {
+            background-color: #f8fdf9;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            color: #2d3a2e;
+        }
+
+        .contact-info i {
+            color: #2d6a4f;
+            width: 20px;
+            text-align: center;
+        }
+
+        form label {
+            font-weight: 700;
+            color: #2d6a4f;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form select,
+        form textarea {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            border: 2px solid #b7e4c7;
+            border-radius: 6px;
+            background-color: #f8fdf9;
+            color: #1b1b1b;
+            width: 100%;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form input[type="tel"]:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: #2d6a4f;
+            outline: none;
+            background-color: #fff;
+        }
+
+        form input[type="submit"] {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background-color: #2d6a4f;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #1b4332;
+        }
+
+        footer {
+            background-color: #1b4332;
+            color: #b7e4c7;
+            text-align: center;
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: #d8f3dc;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            color: #ffd166;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #74c69d;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .back-link:hover { color: #ffd166; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fa-solid fa-spa"></i> Bloom &amp; Petal</h1>
+    <p>Your neighborhood florist since 2010 — Fresh flowers for every occasion.</p>
+    <nav>
+        <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+        <span> | </span>
+        <a href="#products"><i class="fa-solid fa-box-open"></i> Products</a>
+        <span> | </span>
+        <a href="#hours"><i class="fa-solid fa-clock"></i> Hours &amp; Prices</a>
+        <span> | </span>
+        <a href="#about"><i class="fa-solid fa-leaf"></i> About</a>
+        <span> | </span>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <hr>
+</header>
+
+<main>
+
+    <section id="home">
+        <h2><i class="fa-solid fa-star"></i> Welcome to Bloom &amp; Petal</h2>
+        <img
+            src="../images/banner.jpg"
+            alt="Beautiful flower arrangement"
+            width="700"
+            class="hero-img">
+        <p>
+            We offer fresh, hand-picked flowers for every occasion — from romantic
+            bouquets and birthday arrangements to wedding decorations and funeral
+            tributes. Every stem is chosen with care so that your flowers arrive
+            looking their very best.
+        </p>
+        <p>
+            Visit us in store or call to place a custom order. Same-day delivery
+            available within Istanbul.
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="products">
+        <h2><i class="fa-solid fa-box-open"></i> Our Products</h2>
+
+        <h3><i class="fa-solid fa-heart"></i> Red Rose Bouquet</h3>
+        <img class="product-img" src="../images/rose.png" alt="Red rose bouquet" width="250">
+        <p>Classic red roses — the timeless symbol of love and passion.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: from 150 TL</strong></p>
+
+        <h3><i class="fa-solid fa-sun"></i> Sunflower Arrangement</h3>
+        <img class="product-img" src="../images/sun.webp" alt="Sunflower arrangement" width="250">
+        <p>Bright and cheerful sunflowers to light up any room.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: 180 TL</strong></p>
+
+        <h3><i class="fa-solid fa-spa"></i> Orchid Plant</h3>
+        <img class="product-img" src="../images/orch.png" alt="Orchid plant" width="250">
+        <p>Elegant orchids — a sophisticated gift that lasts for weeks.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: 320 TL</strong></p>
+
+        <h3><i class="fa-solid fa-seedling"></i> Tulip Bouquet</h3>
+        <img class="product-img" src="../images/tulip.png" alt="Tulip bouquet" width="250">
+        <p>Colorful tulips, fresh and wonderfully fragrant.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: 150 TL</strong></p>
+
+        <h3><i class="fa-solid fa-leaf"></i> Mixed Spring Flowers</h3>
+        <img class="product-img" src="../images/spring.webp" alt="Mixed spring flowers" width="250">
+        <p>A cheerful seasonal mix that brings spring indoors.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: 200 TL</strong></p>
+
+        <h3><i class="fa-solid fa-snowflake"></i> White Lily Bouquet</h3>
+        <img class="product-img" src="../images/lily.webp" alt="White lily bouquet" width="250">
+        <p>Pure white lilies symbolizing elegance and grace.</p>
+        <p><strong><i class="fa-solid fa-tag"></i> Price: 220 TL</strong></p>
+    </section>
+
+    <hr>
+
+    <section id="hours">
+        <h2><i class="fa-solid fa-clock"></i> Working Hours &amp; Price List</h2>
+
+        <h3>Store Hours</h3>
+        <table cellspacing="0">
+            <caption>Bloom &amp; Petal – Weekly Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Opening</th>
+                    <th>Closing</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Monday</td><td>08:00</td><td>20:00</td><td>–</td></tr>
+                <tr><td>Tuesday</td><td>08:00</td><td>20:00</td><td>–</td></tr>
+                <tr><td>Wednesday</td><td>08:00</td><td>20:00</td><td>–</td></tr>
+                <tr><td>Thursday</td><td>08:00</td><td>20:00</td><td>–</td></tr>
+                <tr><td>Friday</td><td>08:00</td><td>21:00</td><td>Extended hours</td></tr>
+                <tr><td>Saturday</td><td>09:00</td><td>22:00</td><td>Extended hours</td></tr>
+                <tr><td>Sunday</td><td>10:00</td><td>18:00</td><td>–</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Price List</h3>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size / Variant</th>
+                    <th>Price (TL)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Red Rose Bouquet</td><td>Small – 5 stems</td><td>150</td></tr>
+                <tr><td>Red Rose Bouquet</td><td>Medium – 11 stems</td><td>250</td></tr>
+                <tr><td>Red Rose Bouquet</td><td>Large – 21 stems</td><td>450</td></tr>
+                <tr><td>Sunflower Arrangement</td><td>Standard</td><td>180</td></tr>
+                <tr><td>Orchid Plant</td><td>Single Stem</td><td>320</td></tr>
+                <tr><td>Tulip Bouquet</td><td>10 stems</td><td>150</td></tr>
+                <tr><td>Mixed Spring Flowers</td><td>Standard</td><td>200</td></tr>
+                <tr><td>White Lily Bouquet</td><td>Standard</td><td>220</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <h2><i class="fa-solid fa-leaf"></i> About Us</h2>
+        <p>
+            Bloom &amp; Petal has been serving the Istanbul community since 2010.
+            Our passion for flowers and commitment to quality sets us apart.
+            We source our flowers fresh every morning from trusted local growers.
+        </p>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Fresh flowers sourced daily</li>
+            <li>Custom bouquet and arrangement service</li>
+            <li>Wedding and corporate event decoration</li>
+            <li>Same-day delivery within Istanbul</li>
+            <li>Eco-friendly packaging</li>
+            <li>Experienced and passionate florists</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> +90 212 555 0101</p>
+            <p><i class="fa-solid fa-envelope"></i> info@bloomandpetal.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> 15 Rose Street, Beşiktaş, Istanbul, Turkey</p>
+        </div>
+
+        <h3>Send Us a Message</h3>
+        <form>
+            <label for="name"><i class="fa-solid fa-user"></i> Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your full name"><br><br>
+
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="your@email.com"><br><br>
+
+            <label for="phone"><i class="fa-solid fa-phone"></i> Phone (optional):</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+90 5XX XXX XXXX"><br><br>
+
+            <label for="subject"><i class="fa-solid fa-list"></i> Subject:</label><br>
+            <select id="subject" name="subject">
+                <option value="">-- Select a subject --</option>
+                <option value="order">Place an order</option>
+                <option value="delivery">Delivery enquiry</option>
+                <option value="wedding">Wedding / Event</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="message"><i class="fa-solid fa-comment"></i> Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40"
+                placeholder="How can we help you?"></textarea><br><br>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+</main>
+
+<hr>
+
+<footer>
+    <p>&copy; 2025 Bloom &amp; Petal Flower Shop. All rights reserved.</p>
+    <p><a href="../index.html">&larr; Back to Landing Page</a></p>
+    <p><em>Stage 3: Colors &amp; Typography — no margin or padding used.</em></p>
+</footer>
+
+</body>
+</html>

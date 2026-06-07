@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom &amp; Petal – IST4130 Project</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fefae0 0%, #d8f3dc 60%, #b7e4c7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(45, 106, 79, 0.15);
+            padding: 52px 48px;
+            max-width: 760px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 56px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: #2d6a4f;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #74796d;
+            margin: 6px 0 28px;
+            font-size: 0.95rem;
+        }
+
+        .badge-row { text-align: center; margin-bottom: 36px; }
+        .badge {
+            display: inline-block;
+            background: #d8f3dc;
+            color: #1b4332;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #95a89d;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            margin-bottom: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 36px;
+        }
+        table th, table td {
+            padding: 11px 14px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.93rem;
+        }
+        table th {
+            color: #2d6a4f;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        table tr:last-child td { border-bottom: none; }
+
+        .stages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .stage-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            background: #f8fdf9;
+            border: 2px solid #d8f3dc;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2d3a2e;
+            transition: all 0.2s ease;
+        }
+        .stage-link:hover {
+            background: #2d6a4f;
+            border-color: #2d6a4f;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(45, 106, 79, 0.25);
+        }
+
+        .stage-num {
+            width: 36px;
+            height: 36px;
+            background: #2d6a4f;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+        .stage-link:hover .stage-num {
+            background: #fff;
+            color: #2d6a4f;
+        }
+
+        .stage-title { font-weight: 700; font-size: 0.95rem; }
+        .stage-desc { font-size: 0.76rem; opacity: 0.65; margin-top: 2px; }
+
+        .footer-note {
+            text-align: center;
+            color: #b0b8b2;
+            font-size: 0.78rem;
+            margin-top: 36px;
+            padding-top: 24px;
+            border-top: 1px solid #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">🌸</div>
+        <h1>Bloom &amp; Petal</h1>
+        <p class="subtitle">A Florist Website — IST4130 Web Programming Project</p>
+
+        <div class="badge-row">
+            <span class="badge">🌿 Business Type: Flower Shop</span>
+        </div>
+
+        <p class="section-label">Group Members</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name Surname</th>
+                    <th>Student ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BARIŞ ARSLAN</td>
+                    <td>21023061</td>
+                </tr>
+                <tr>
+                    <td>BURAK BAYRAM</td>
+                    <td>22023006</td>
+                </tr>
+                <tr>
+                    <td>GÖRKEM YILMAZ</td>
+                    <td>22023047</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="section-label">Project Stages</p>
+        <div class="stages">
+            <a class="stage-link" href="stage2/index.html">
+                <div class="stage-num">2</div>
+                <div>
+                    <div class="stage-title">HTML Skeleton</div>
+                    <div class="stage-desc">HTML only – no CSS</div>
+                </div>
+            </a>
+            <a class="stage-link" href="stage3/index.html">
+                <div class="stage-num">3</div>
+                <div>
+                    <div class="stage-title">Colors &amp; Typography</div>
+                    <div class="stage-desc">CSS without box model</div>
+                </div>
+            </a>
+            <a class="stage-link" href="stage4/index.html">
+                <div class="stage-num">4</div>
+                <div>
+                    <div class="stage-title">Spacious Design</div>
+                    <div class="stage-desc">Box model (margin &amp; padding)</div>
+                </div>
+            </a>
+            <a class="stage-link" href="stage5/index.html">
+                <div class="stage-num">5</div>
+                <div>
+                    <div class="stage-title">Modern Layout</div>
+                    <div class="stage-desc">CSS Grid</div>
+                </div>
+            </a>
+            <a class="stage-link" href="stage6/index.html">
+                <div class="stage-num">6</div>
+                <div>
+                    <div class="stage-title">Interactive</div>
+                    <div class="stage-desc">JavaScript &amp; DOM – Shopping Cart</div>
+                </div>
+            </a>
+        </div>
+
+        <p class="footer-note">IST4130 – Web Programming &nbsp;|&nbsp; 2025–2026 Spring &nbsp;|&nbsp; Yıldız Technical University</p>
+    </div>
+</body>
+</html>

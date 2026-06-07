@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom &amp; Petal – Stage 6: Interactive</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-grid">
+
+    <!-- HEADER -->
+    <header class="grid-header">
+        <h1><i class="fa-solid fa-spa"></i> Bloom &amp; Petal</h1>
+        <p>Your neighborhood florist since 2010 — Fresh flowers for every occasion.</p>
+    </header>
+
+    <!-- NAV -->
+    <nav class="grid-nav">
+        <ul>
+            <li><a href="#hero"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#products"><i class="fa-solid fa-box-open"></i> Products</a></li>
+            <li><a href="#info"><i class="fa-solid fa-clock"></i> Hours &amp; About</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+
+        <!-- Cart badge in nav -->
+        <div class="nav-cart" onclick="toggleCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="cart-badge">0</span>
+            Shopping Cart
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="grid-hero" id="hero">
+        <h2><i class="fa-solid fa-star"></i> Welcome to Bloom &amp; Petal</h2>
+        <img src="../images/banner.jpg" alt="Beautiful flower arrangement">
+        <p>
+            We offer fresh, hand-picked flowers for every occasion — from romantic bouquets
+            and birthday arrangements to wedding decorations and funeral tributes.
+        </p>
+        <p>Visit us in store or call to place a custom order. Same-day delivery within Istanbul.</p>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="grid-products" id="products">
+        <h2><i class="fa-solid fa-box-open"></i> Our Products</h2>
+        <p class="products-hint"><i class="fa-solid fa-circle-info"></i> Click <strong>Add to Cart</strong> to select a product and see your order update instantly.</p>
+
+        <div class="product-grid">
+
+            <div class="product-card" id="card-1">
+                <img src="../images/rose.png" alt="Red rose bouquet">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-heart"></i> Red Rose Bouquet</h3>
+                    <p>Classic red roses — the timeless symbol of love and passion.</p>
+                    <div class="card-footer">
+                        <span class="product-price">250 TL</span>
+                        <button class="btn-add" onclick="addToCart(1)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" id="card-2">
+                <img src="../images/sun.webp" alt="Sunflower arrangement">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-sun"></i> Sunflower Arrangement</h3>
+                    <p>Bright and cheerful sunflowers to light up any room.</p>
+                    <div class="card-footer">
+                        <span class="product-price">180 TL</span>
+                        <button class="btn-add" onclick="addToCart(2)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" id="card-3">
+                <img src="../images/orch.png" alt="Orchid plant">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-spa"></i> Orchid Plant</h3>
+                    <p>Elegant orchids — a sophisticated gift that lasts for weeks.</p>
+                    <div class="card-footer">
+                        <span class="product-price">320 TL</span>
+                        <button class="btn-add" onclick="addToCart(3)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" id="card-4">
+                <img src="../images/tulip.png" alt="Tulip bouquet">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-seedling"></i> Tulip Bouquet</h3>
+                    <p>Colorful tulips, fresh and wonderfully fragrant.</p>
+                    <div class="card-footer">
+                        <span class="product-price">150 TL</span>
+                        <button class="btn-add" onclick="addToCart(4)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" id="card-5">
+                <img src="../images/spring.webp" alt="Mixed spring flowers">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-leaf"></i> Mixed Spring Flowers</h3>
+                    <p>A cheerful seasonal mix that brings spring indoors.</p>
+                    <div class="card-footer">
+                        <span class="product-price">200 TL</span>
+                        <button class="btn-add" onclick="addToCart(5)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" id="card-6">
+                <img src="../images/lily.webp" alt="White lily bouquet">
+                <div class="product-card-body">
+                    <h3><i class="fa-solid fa-snowflake"></i> White Lily Bouquet</h3>
+                    <p>Pure white lilies symbolizing elegance and grace.</p>
+                    <div class="card-footer">
+                        <span class="product-price">220 TL</span>
+                        <button class="btn-add" onclick="addToCart(6)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHOPPING CART PANEL (DOM-controlled) -->
+    <aside class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Your Cart</h2>
+            <button class="cart-close" onclick="toggleCart()" title="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items">
+            <p class="empty-cart"><i class="fa-regular fa-face-smile"></i> Your cart is empty.<br>Add some flowers!</p>
+        </div>
+
+        <div class="cart-summary" id="cart-summary" style="display:none;">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total" class="cart-total-amount">0 TL</span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">
+                <i class="fa-solid fa-check"></i> Place Order
+            </button>
+            <button class="btn-clear" onclick="clearCart()">
+                <i class="fa-solid fa-trash"></i> Clear Cart
+            </button>
+        </div>
+    </aside>
+
+    <!-- ORDER CONFIRMATION (hidden until checkout) -->
+    <div id="order-confirmation" class="order-confirmation" style="display:none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Order Placed!</h3>
+        <p>Thank you for your order. We'll contact you shortly to confirm delivery.</p>
+        <button onclick="closeConfirmation()">Close</button>
+    </div>
+
+    <!-- INFO: Hours + About -->
+    <div class="grid-info" id="info">
+
+        <div class="info-hours">
+            <h2><i class="fa-solid fa-clock"></i> Hours &amp; Prices</h2>
+
+            <h3>Store Hours</h3>
+            <table>
+                <thead>
+                    <tr><th>Day</th><th>Open</th><th>Close</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mon – Thu</td><td>08:00</td><td>20:00</td></tr>
+                    <tr><td>Friday</td><td>08:00</td><td>21:00</td></tr>
+                    <tr><td>Saturday</td><td>09:00</td><td>22:00</td></tr>
+                    <tr><td>Sunday</td><td>10:00</td><td>18:00</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Price List</h3>
+            <table>
+                <thead>
+                    <tr><th>Product</th><th>Price (TL)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Red Rose – Small (5)</td><td>150</td></tr>
+                    <tr><td>Red Rose – Medium (11)</td><td>250</td></tr>
+                    <tr><td>Red Rose – Large (21)</td><td>450</td></tr>
+                    <tr><td>Sunflower Arrangement</td><td>180</td></tr>
+                    <tr><td>Orchid Plant</td><td>320</td></tr>
+                    <tr><td>Tulip Bouquet</td><td>150</td></tr>
+                    <tr><td>Mixed Spring Flowers</td><td>200</td></tr>
+                    <tr><td>White Lily Bouquet</td><td>220</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-about">
+            <h2><i class="fa-solid fa-leaf"></i> About Us</h2>
+            <p>
+                Bloom &amp; Petal has been serving the Istanbul community since 2010.
+                Our passion for flowers and commitment to quality sets us apart.
+                We source our flowers fresh every morning from trusted local growers.
+            </p>
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Fresh flowers sourced daily</li>
+                <li>Custom bouquet and arrangement service</li>
+                <li>Wedding and corporate event decoration</li>
+                <li>Same-day delivery within Istanbul</li>
+                <li>Eco-friendly packaging</li>
+                <li>Experienced and passionate florists</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <section class="grid-contact" id="contact">
+        <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+        <div class="contact-grid">
+
+            <div class="contact-details">
+                <h3>Get In Touch</h3>
+                <p><i class="fa-solid fa-phone"></i> +90 212 555 0101</p>
+                <p><i class="fa-solid fa-envelope"></i> info@bloomandpetal.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> 15 Rose Street, Beşiktaş, Istanbul</p>
+                <p><i class="fa-solid fa-clock"></i> Mon–Fri: 08:00–20:00</p>
+            </div>
+
+            <form onsubmit="submitForm(event)">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="">-- Select a subject --</option>
+                    <option value="order">Place an order</option>
+                    <option value="delivery">Delivery enquiry</option>
+                    <option value="wedding">Wedding / Event</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    placeholder="How can we help you?"></textarea>
+
+                <input type="submit" value="Send Message">
+                <p id="form-success" class="form-success" style="display:none;">
+                    <i class="fa-solid fa-circle-check"></i> Message sent! We'll be in touch soon.
+                </p>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="grid-footer">
+        <p><i class="fa-solid fa-spa"></i> &copy; 2025 Bloom &amp; Petal Flower Shop. All rights reserved.</p>
+        <p><a href="../index.html">&larr; Back to Landing Page</a></p>
+        <p><em>Stage 6: JavaScript &amp; DOM — Shopping cart with dynamic updates.</em></p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

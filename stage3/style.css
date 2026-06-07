@@ -1,0 +1,276 @@
+/* =========================================================
+   STAGE 3 — Colors & Typography
+   RULE: margin and padding are strictly NOT used.
+   The cramped appearance is intentional and expected.
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #fefae0;
+    color: #1b1b1b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #d4edda;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #b7e4c7;
+    font-style: italic;
+}
+
+nav {
+    background-color: #1b4332;
+}
+
+nav a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #d8f3dc;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #ffd166;
+    text-decoration: underline;
+}
+
+nav span {
+    color: #52b788;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #d4edda;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2d6a4f;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: #40916c;
+}
+
+section {
+    background-color: #ffffff;
+}
+
+#home {
+    background-color: #f8fdf9;
+}
+
+#home p {
+    font-size: 1.05rem;
+    color: #3d405b;
+}
+
+#home img {
+    display: block;
+    border: 4px solid #52b788;
+    border-radius: 8px;
+}
+
+#products {
+    background-color: #fefae0;
+}
+
+.product-img {
+    border: 3px solid #d4a373;
+    border-radius: 6px;
+    display: block;
+}
+
+#products p {
+    color: #555;
+}
+
+#products strong {
+    color: #2d6a4f;
+    font-size: 1.05rem;
+}
+
+#hours {
+    background-color: #f0faf4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Lato', sans-serif;
+}
+
+table caption {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #2d6a4f;
+    text-align: left;
+}
+
+table th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: left;
+}
+
+table td {
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #d8f3dc;
+    font-size: 0.95rem;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f0faf4;
+}
+
+table th, table td {
+    border: 1px solid #b7e4c7;
+}
+
+#about {
+    background-color: #fff8f0;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #3d405b;
+}
+
+#about ul {
+    list-style: none;
+}
+
+#about ul li::before {
+    content: "\f06c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #52b788;
+}
+
+#about ul li {
+    color: #3d3d3d;
+    font-size: 0.97rem;
+}
+
+#contact {
+    background-color: #f8fdf9;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #2d3a2e;
+}
+
+.contact-info i {
+    color: #2d6a4f;
+    width: 20px;
+    text-align: center;
+}
+
+form label {
+    font-weight: 700;
+    color: #2d6a4f;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    border: 2px solid #b7e4c7;
+    border-radius: 6px;
+    background-color: #f8fdf9;
+    color: #1b1b1b;
+    width: 100%;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #2d6a4f;
+    outline: none;
+    background-color: #fff;
+}
+
+form input[type="submit"] {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background-color: #2d6a4f;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1b4332;
+}
+
+footer {
+    background-color: #1b4332;
+    color: #b7e4c7;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+footer a {
+    color: #d8f3dc;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    color: #ffd166;
+}
+
+.back-link {
+    display: inline-block;
+    color: #74c69d;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.back-link:hover { color: #ffd166; }
